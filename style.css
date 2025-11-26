@@ -1,0 +1,192 @@
+/* style.css */
+
+/* --- 1. Pengaturan Global & Tipografi --- */
+body {
+    font-family: 'Poppins', sans-serif; /* Menggunakan Poppins sebagai font utama */
+    color: #333;
+    background-color: #F8F8F8; /* Latar belakang lebih terang dari F2F0EA untuk kontras */
+    line-height: 1.6; /* Keterbacaan teks */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Menggunakan Montserrat untuk judul */
+    font-weight: 700;
+    color: #222;
+}
+
+/* Warna krem untuk bagian tertentu */
+#home, #about, .bg-light-cream { /* Gunakan kelas baru bg-light-cream */
+    background-color: #F2F0EA !important; 
+}
+
+/* --- 2. Navigasi --- */
+.navbar {
+    background-color: #343a40 !important; /* Tetap gelap untuk kontras */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+    font-weight: 800; /* Lebih tebal */
+    letter-spacing: 1px;
+    font-size: 1.6rem; /* Sedikit lebih besar */
+    color: #ffffff !important;
+}
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+}
+
+/* --- 3. Hero Section --- */
+#home {
+    padding: 100px 0; /* Padding lebih besar */
+    display: flex;
+    align-items: center; /* Memastikan konten di tengah vertikal */
+}
+#home .display-4 {
+    font-size: 3.5rem; /* Ukuran judul lebih besar */
+    margin-bottom: 15px;
+}
+#home .lead {
+    font-size: 1.3rem; /* Ukuran teks lead lebih besar */
+    font-weight: 300;
+    color: #555;
+}
+#home .rounded-circle {
+    width: 200px; /* Ukuran foto lebih besar */
+    height: 200px;
+    object-fit: cover;
+    border: 7px solid rgba(255, 255, 255, 0.8); /* Border putih transparan */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- 4. Tombol Aksi (Primary Button) --- */
+.btn-primary {
+    background-color: #6C757D; /* Warna abu-abu yang lebih soft sebagai primary */
+    border-color: #6C757D;
+    padding: 12px 30px;
+    border-radius: 50px; /* Tombol bulat */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #5A6268;
+    border-color: #5A6268;
+    transform: translateY(-2px); /* Efek angkat saat hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.btn-outline-primary {
+    color: #6C757D;
+    border-color: #6C757D;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.btn-outline-primary:hover {
+    background-color: #6C757D;
+    color: #fff;
+}
+
+/* --- 5. Bagian Tentang Saya (About) --- */
+#about {
+    padding: 80px 0;
+}
+#about .badge {
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 20px;
+    background-color: #e9ecef !important; /* Warna badge lebih netral */
+    color: #495057 !important;
+    font-weight: 500;
+}
+
+/* --- 6. Bagian Portofolio --- */
+#portfolio {
+    padding: 80px 0;
+}
+.card {
+    border: none;
+    border-radius: 15px; /* Sudut kartu lebih membulat */
+    overflow: hidden; /* Pastikan gambar mengikuti radius */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Bayangan lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px); /* Efek angkat lebih jelas */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-top {
+    height: 220px; /* Sedikit lebih tinggi */
+    object-fit: cover;
+    filter: brightness(0.95); /* Sedikit redup */
+    transition: filter 0.3s ease;
+}
+.card:hover .card-img-top {
+    filter: brightness(1); /* Lebih cerah saat hover */
+}
+
+.card-body {
+    padding: 25px;
+}
+.card-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.card-text {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- 7. Bagian Kontak --- */
+#contact {
+    padding: 80px 0;
+}
+#contact .form-control {
+    border-radius: 10px; /* Sudut input yang membulat */
+    padding: 12px 15px;
+    border-color: #ddd;
+}
+#contact .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25); /* Focus shadow sesuai warna primary */
+    border-color: #6C757D;
+}
+
+/* --- 8. Footer --- */
+footer {
+    background-color: #222 !important; /* Footer lebih gelap */
+    color: rgba(255, 255, 255, 0.7);
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* --- 9. Utilitas Umum --- */
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.08); /* Garis pemisah yang lebih halus */
+    margin: 5rem 0;
+}
+
+/* Tambahkan sedikit ruang di atas dan bawah judul section */
+h2 {
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #6C757D; /* Garis bawah aksen */
+    border-radius: 2px;
+}
